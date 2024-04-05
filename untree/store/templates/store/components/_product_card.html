@@ -1,0 +1,9 @@
+{% load static %}
+<a class="product-item" href="{% url 'product' product.slug %}">
+    <img src="{{ product.get_first_image }}" class="img-fluid product-thumbnail">
+    <h3 class="product-title">{{ product.title }}</h3>
+    <strong class="product-price">{{ product.price }}</strong>
+    <span class="icon-cross">
+        <img src="{% static 'store/images/cross.svg' %}" class="img-fluid">
+    </span>
+</a>
